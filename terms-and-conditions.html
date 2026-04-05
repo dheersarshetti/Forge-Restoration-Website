@@ -407,7 +407,7 @@
       margin-bottom: var(--space-12);
     }
     @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } }
+    @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 0.8fr; } }
     .footer-brand .logo { margin-bottom: var(--space-4); }
     .logo-mark {
       width: 36px; height: 36px;
@@ -657,12 +657,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo" aria-label="Forge Restoration — back to home">
-            <div class="logo-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L3 9v11a1 1 0 001 1h5v-7h6v7h5a1 1 0 001-1V9L12 2z" fill="rgba(255,255,255,0.9)"/>
-              </svg>
-            </div>
-            <div class="logo-text">FORGE<span>Restoration</span></div>
+            <img src="Forge%20Restoration%20Logo.png" alt="Forge Restoration" style="height:48px; width:auto; object-fit:contain;">
           </a>
           <p class="footer-tagline">Built to Last. Forged to Fight.<br>Serving southwest Missouri homeowners since 2018.</p>
           <div class="social-links" aria-label="Social media links">
@@ -709,14 +704,18 @@
             </div>
           </div>
         </div>
+
+        <div>
+          <div class="footer-links-title">Legal</div>
+          <nav class="footer-links" aria-label="Legal links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          </nav>
+        </div>
       </div>
 
       <div class="footer-bottom">
         <p>&copy; 2026 Forge Restoration &bull; Billings, MO &bull; Licensed &amp; Insured &bull; All Rights Reserved</p>
-        <div class="footer-legal">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-        </div>
       </div>
     </div>
   </footer>
