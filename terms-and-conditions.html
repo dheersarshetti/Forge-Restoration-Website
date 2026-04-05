@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions | Forge Restoration — Roofing &amp; Solar</title>
+  <meta name="description" content="Terms and Conditions for SMS messaging services provided by Forge Restoration - Roofing and Solar.">
+  <link rel="icon" type="image/png" href="Forge Restoration Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       DESIGN TOKENS
+    ============================================================ */
+    :root {
+      --c-base:           #0A0A0A;
+      --c-elevated:       #141414;
+      --c-floating:       #1C1C1C;
+      --c-bronze:         #A66F2D;
+      --c-bronze-light:   #C8922E;
+      --c-bronze-dark:    #7A5220;
+      --c-bronze-glow:    rgba(166,111,45,0.15);
+      --c-text-primary:   #F5F0EB;
+      --c-text-secondary: rgba(245,240,235,0.65);
+      --c-text-muted:     rgba(245,240,235,0.38);
+      --c-border:         rgba(166,111,45,0.18);
+      --c-border-hover:   rgba(166,111,45,0.42);
+      --c-green:          #37ca37;
+      --shadow-card:      0 2px 4px rgba(0,0,0,.45), 0 8px 24px rgba(0,0,0,.35), 0 0 0 1px rgba(166,111,45,.12);
+      --shadow-cta:       0 2px 4px rgba(166,111,45,.3), 0 8px 20px rgba(166,111,45,.22), 0 0 0 1px rgba(166,111,45,.5);
+      --shadow-cta-hover: 0 4px 8px rgba(166,111,45,.4), 0 14px 36px rgba(166,111,45,.32), 0 0 54px rgba(166,111,45,.14);
+      --font-display:     'Barlow Condensed', 'Impact', sans-serif;
+      --font-body:        'Montserrat', 'Segoe UI', sans-serif;
+      --text-xs:   0.75rem;
+      --text-sm:   0.875rem;
+      --text-base: 1rem;
+      --text-lg:   1.125rem;
+      --text-xl:   1.25rem;
+      --text-2xl:  clamp(1.5rem,  3vw,   2rem);
+      --text-3xl:  clamp(2rem,    4vw,   3rem);
+      --text-4xl:  clamp(2.5rem,  5vw,   4rem);
+      --space-1:   4px;
+      --space-2:   8px;
+      --space-3:   12px;
+      --space-4:   16px;
+      --space-5:   20px;
+      --space-6:   24px;
+      --space-8:   32px;
+      --space-10:  40px;
+      --space-12:  48px;
+      --space-16:  64px;
+      --space-20:  80px;
+      --space-24:  96px;
+      --radius-sm:  4px;
+      --radius-md:  8px;
+      --radius-lg:  16px;
+      --radius-xl:  24px;
+      --radius-pill:9999px;
+      --container:  min(1200px, calc(100% - 48px));
+      --section-py: clamp(64px, 10vw, 112px);
+      --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in:    cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    /* RESET & BASE */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      background: var(--c-base);
+      color: var(--c-text-primary);
+      line-height: 1.7;
+      font-size: var(--text-base);
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul, ol { list-style: none; }
+
+    .skip-link {
+      position: absolute; top: -100%; left: 16px;
+      background: var(--c-bronze); color: #000;
+      padding: 8px 16px; border-radius: var(--radius-md);
+      font-weight: 600; z-index: 10001;
+    }
+    .skip-link:focus { top: 16px; }
+    *:focus-visible {
+      outline: 2px solid var(--c-bronze);
+      outline-offset: 4px;
+    }
+
+    .container { width: var(--container); margin: 0 auto; }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--c-bronze);
+      margin-bottom: var(--space-3);
+    }
+
+    .text-bronze-gradient {
+      background: linear-gradient(135deg, #C8922E 0%, #A66F2D 45%, #E8A83A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* CTA Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      min-height: 48px;
+      transition: opacity 0.45s var(--ease-out), transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
+      white-space: nowrap;
+    }
+    .btn:active { transform: translateY(1px) scale(0.98); }
+    .btn-primary {
+      background: linear-gradient(135deg, #C8922E 0%, #A66F2D 100%);
+      color: #fff;
+      box-shadow: var(--shadow-cta);
+    }
+    .btn-primary:hover {
+      box-shadow: var(--shadow-cta-hover);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1.5px solid var(--c-bronze);
+      color: var(--c-bronze);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      background: rgba(166,111,45,0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(166,111,45,0.15);
+    }
+
+    /* GRAIN OVERLAY */
+    #grain-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0.032;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* HEADER */
+    #site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 var(--space-6);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+      background: rgba(10,10,10,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 1px 0 rgba(166,111,45,0.14), 0 4px 24px rgba(0,0,0,0.5);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+    .logo-img {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: var(--space-1);
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-links a {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--c-text-secondary);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: color 0.45s var(--ease-out), background 0.45s var(--ease-out);
+    }
+    .nav-links a:hover {
+      color: var(--c-text-primary);
+      background: rgba(255,255,255,0.05);
+    }
+    .nav-actions {
+      display: none;
+      align-items: center;
+      gap: var(--space-3);
+      flex-shrink: 0;
+    }
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--c-bronze);
+      letter-spacing: 0.02em;
+    }
+    .nav-phone svg { width: 14px; height: 14px; }
+    #menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      z-index: 1001;
+      border-radius: var(--radius-sm);
+      transition: background 0.45s var(--ease-out);
+    }
+    #menu-toggle:hover { background: rgba(255,255,255,0.06); }
+    #menu-toggle span {
+      display: block;
+      height: 1.5px;
+      background: var(--c-text-primary);
+      border-radius: 2px;
+      transform-origin: center;
+      transition: opacity 0.38s var(--ease-out), transform 0.38s var(--ease-out);
+    }
+    #menu-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    #menu-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    #menu-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    #menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s var(--ease-out);
+      backdrop-filter: blur(4px);
+    }
+    #menu-overlay.open { opacity: 1; pointer-events: all; }
+    #mobile-menu {
+      position: fixed;
+      top: 0; right: 0;
+      height: 100dvh;
+      width: min(320px, 85vw);
+      background: var(--c-elevated);
+      border-left: 1px solid var(--c-border);
+      z-index: 1000;
+      transform: translateX(100%);
+      transition: transform 0.55s var(--ease-out);
+      padding: 88px var(--space-6) var(--space-8);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      overflow-y: auto;
+    }
+    #mobile-menu.open { transform: translateX(0); }
+    #mobile-menu a {
+      font-size: var(--text-lg);
+      font-weight: 600;
+      font-family: var(--font-display);
+      letter-spacing: 0.06em;
+      color: var(--c-text-secondary);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--c-border);
+      transition: color 0.45s var(--ease-out);
+    }
+    #mobile-menu a:last-of-type { border-bottom: none; }
+    #mobile-menu a:hover { color: var(--c-bronze); }
+    .mobile-menu-cta {
+      margin-top: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .mobile-menu-cta .btn { width: 100%; justify-content: center; }
+    @media (min-width: 900px) {
+      .nav-links, .nav-actions { display: flex; }
+      #menu-toggle { display: none; }
+    }
+
+    /* LEGAL HERO */
+    .legal-hero {
+      padding: 140px 0 64px;
+      position: relative;
+      background:
+        radial-gradient(ellipse 70% 60% at 20% 50%, rgba(166,111,45,0.08) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 80% at 85% 20%, rgba(166,111,45,0.05) 0%, transparent 60%),
+        var(--c-base);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .legal-hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .legal-hero h1 {
+      font-family: var(--font-display);
+      font-size: var(--text-4xl);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--c-text-primary);
+      margin-bottom: var(--space-4);
+    }
+    .legal-hero p {
+      font-size: var(--text-lg);
+      color: var(--c-text-secondary);
+      max-width: 560px;
+    }
+
+    /* LEGAL CONTENT */
+    .legal-content {
+      padding: 64px 0 96px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--c-bronze);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-10);
+      transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+    }
+    .back-link:hover {
+      opacity: 0.8;
+      transform: translateX(-3px);
+    }
+    .legal-card {
+      background: var(--c-elevated);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(32px, 5vw, 64px);
+      box-shadow: var(--shadow-card);
+    }
+    .legal-card > p:first-of-type {
+      font-size: var(--text-base);
+      color: var(--c-text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-10);
+      padding-bottom: var(--space-10);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .legal-section {
+      margin-bottom: var(--space-10);
+      padding-bottom: var(--space-10);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .legal-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .legal-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--c-bronze-light);
+      margin-bottom: var(--space-4);
+    }
+    .legal-section p {
+      font-size: var(--text-base);
+      color: var(--c-text-secondary);
+      line-height: 1.8;
+    }
+    .legal-section a {
+      color: var(--c-bronze);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.3s var(--ease-out);
+    }
+    .legal-section a:hover { color: var(--c-bronze-light); }
+
+    /* FOOTER */
+    footer {
+      background: #050505;
+      border-top: 1px solid var(--c-border);
+      padding: var(--space-16) 0 var(--space-8);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+      margin-bottom: var(--space-12);
+    }
+    @media (min-width: 640px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } }
+    .footer-brand .logo { margin-bottom: var(--space-4); }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #C8922E 0%, #A66F2D 100%);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-right: var(--space-3);
+    }
+    .logo-mark svg { width: 20px; height: 20px; }
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--c-text-primary);
+      line-height: 1.1;
+    }
+    .logo-text span {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--c-bronze);
+      text-transform: uppercase;
+    }
+    .footer-tagline {
+      font-size: var(--text-sm);
+      color: var(--c-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-6);
+      max-width: 280px;
+    }
+    .social-links {
+      display: flex;
+      gap: var(--space-3);
+    }
+    .social-link {
+      width: 38px; height: 38px;
+      background: var(--c-elevated);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.45s var(--ease-out), transform 0.45s var(--ease-out), background 0.45s var(--ease-out);
+    }
+    .social-link:hover {
+      border-color: var(--c-border-hover);
+      background: rgba(166,111,45,0.1);
+      transform: translateY(-2px);
+    }
+    .social-link svg { width: 16px; height: 16px; }
+    .footer-links-title, .footer-contact-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c-text-primary);
+      margin-bottom: var(--space-5);
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .footer-links a {
+      font-size: var(--text-sm);
+      color: var(--c-text-secondary);
+      transition: color 0.45s var(--ease-out);
+    }
+    .footer-links a:hover { color: var(--c-bronze); }
+    .footer-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .footer-contact-item {
+      font-size: var(--text-sm);
+      color: var(--c-text-secondary);
+      line-height: 1.5;
+    }
+    .footer-contact-item strong {
+      display: block;
+      color: var(--c-text-primary);
+      font-size: var(--text-xs);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .footer-contact-item a { color: var(--c-bronze); }
+    .footer-bottom {
+      border-top: 1px solid rgba(166,111,45,0.1);
+      padding-top: var(--space-6);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+    .footer-bottom p {
+      font-size: var(--text-xs);
+      color: var(--c-text-muted);
+      letter-spacing: 0.04em;
+    }
+    .footer-legal {
+      display: flex;
+      gap: var(--space-5);
+    }
+    .footer-legal a {
+      font-size: var(--text-xs);
+      color: var(--c-text-muted);
+      transition: color 0.45s var(--ease-out);
+    }
+    .footer-legal a:hover { color: var(--c-text-secondary); }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="grain-overlay" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header id="site-header" role="banner">
+    <a href="index.html" class="logo" aria-label="Forge Restoration — Home">
+      <img src="Forge%20Restoration%20Logo.png" alt="Forge Restoration" class="logo-img">
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why-us">Why Us</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="tel:4174140854" class="nav-phone" aria-label="Call us at 417-414-0854">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.04 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        417-414-0854
+      </a>
+      <a href="index.html#contact" class="btn btn-primary">Free Inspection</a>
+    </div>
+
+    <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div id="menu-overlay" aria-hidden="true"></div>
+  <nav id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#why-us">Why Choose Us</a>
+    <a href="index.html#process">Our Process</a>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Contact</a>
+    <div class="mobile-menu-cta">
+      <a href="tel:4174140854" class="btn btn-outline">Call 417-414-0854</a>
+      <a href="index.html#contact" class="btn btn-primary">Get Free Inspection</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="legal-hero">
+      <div class="container">
+        <div class="legal-hero-inner">
+          <span class="section-eyebrow">Legal</span>
+          <h1><span class="text-bronze-gradient">Terms &amp; Conditions</span></h1>
+          <p>SMS messaging terms for Forge Restoration — Roofing and Solar A2P 10DLC services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="legal-content">
+      <div class="container">
+        <a href="index.html" class="back-link">&#8592; Back to Home</a>
+
+        <div class="legal-card">
+          <p>These Terms and Conditions apply to all SMS messages sent and received as part of the A2P 10DLC messaging services provided by Forge Restoration - Roofing and Solar. Your use of this service constitutes acceptance of these terms.</p>
+
+          <div class="legal-section">
+            <h2>Messaging Consent</h2>
+            <p>As a user, you must explicitly consent to receive messages from Forge Restoration - Roofing and Solar. Consent can be given through various channels including, but not limited to, our website sign-up forms, paper forms, or verbally through customer service interactions.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Message Types and Frequency</h2>
+            <p>Messages sent by Forge Restoration - Roofing and Solar may include alerts, reminders, promotional offers, updates, and other relevant communications. The frequency of these messages will depend on your interaction with our services and your preferences.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Data Rates and Charges</h2>
+            <p>Standard message and data rates may apply to any messages you send or receive as part of our service. This could affect your bill and depends on the terms set by your mobile carrier.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Opt-Out Instructions</h2>
+            <p>To discontinue receiving messages from Forge Restoration - Roofing and Solar, you can reply "STOP" to any of our messages at any time. This will unsubscribe you from our SMS communications.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Privacy Policy</h2>
+            <p>Our Privacy Policy outlines how we collect, use, and protect your data in relation to our A2P 10DLC messaging service. It can be found on our website at <a href="privacy-policy.html">forgerestore.com/privacy-policy</a>.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Message Delivery</h2>
+            <p>Forge Restoration - Roofing and Solar does not guarantee that messages will be delivered without delays or failures. Such issues can occur due to factors outside our control, such as network problems or device compatibility.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>User Obligations</h2>
+            <p>When using our messaging service, you agree to abide by all applicable laws and regulations. You must not use this service to send messages that are offensive, illegal, or intended to harass or harm others.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Compliance with Laws</h2>
+            <p>You acknowledge that the messaging service must be used in compliance with all relevant laws, including those relating to privacy, telecommunications, and commercial communications.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Changes to Terms and Conditions</h2>
+            <p>Forge Restoration - Roofing and Solar reserves the right to change these Terms and Conditions at any time. Changes will be communicated through our website or direct communications where feasible.</p>
+          </div>
+
+          <div class="legal-section">
+            <h2>Contact Information</h2>
+            <p>For any queries or concerns regarding these Terms and Conditions, please contact Forge Restoration - Roofing and Solar at <a href="mailto:jeremy@forgerestore.com">jeremy@forgerestore.com</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Forge Restoration — back to home">
+            <div class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L3 9v11a1 1 0 001 1h5v-7h6v7h5a1 1 0 001-1V9L12 2z" fill="rgba(255,255,255,0.9)"/>
+              </svg>
+            </div>
+            <div class="logo-text">FORGE<span>Restoration</span></div>
+          </a>
+          <p class="footer-tagline">Built to Last. Forged to Fight.<br>Serving southwest Missouri homeowners since 2018.</p>
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://www.facebook.com/forgerestore" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Forge Restoration on Facebook">
+              <svg viewBox="0 0 24 24" fill="#A66F2D" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.google.com/search?q=Forge+Restoration+Billings+MO" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Forge Restoration on Google">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-links-title">Quick Links</div>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html#services">Our Services</a>
+            <a href="index.html#why-us">Why Choose Us</a>
+            <a href="index.html#process">Our Process</a>
+            <a href="index.html#gallery">Project Gallery</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#contact">Contact &amp; Free Quote</a>
+          </nav>
+        </div>
+
+        <div>
+          <div class="footer-contact-title">Contact</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <strong>Phone</strong>
+              <a href="tel:4174140854">417-414-0854</a>
+            </div>
+            <div class="footer-contact-item">
+              <strong>Email</strong>
+              <a href="mailto:jeremy@forgerestore.com">jeremy@forgerestore.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <strong>Hours</strong>
+              Mon – Sat, 8AM – 6PM
+            </div>
+            <div class="footer-contact-item">
+              <strong>Location</strong>
+              Billings, MO &mdash; Serving Southwest Missouri
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Forge Restoration &bull; Billings, MO &bull; Licensed &amp; Insured &bull; All Rights Reserved</p>
+        <div class="footer-legal">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile menu
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    function openMenu() {
+      toggle.classList.add('open');
+      mobileMenu.classList.add('open');
+      overlay.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      toggle.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      overlay.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    toggle.addEventListener('click', () => {
+      toggle.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    overlay.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  </script>
+</body>
+</html>
